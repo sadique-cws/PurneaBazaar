@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\{Product,Category,Brand};
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+       $data['product'] = Product::all();
+        return view("admin.manageProducts",$data);
     }
 
     /**
@@ -24,7 +25,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $data['category']= Category::all();
+        $data['brand']= Brand::all();
+        return view('admin.insertProduct',$data);
+
     }
 
     /**
@@ -35,7 +39,29 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' =>"required",
+            'category_id' =>"required",
+            'brand_id' =>"required",
+            'price' =>"required",
+            'discount_price' =>"required",
+            'image' =>"required",
+            'description' =>"required",
+            'stock' =>"required",
+        ]);
+        $data = new Product();
+        $data->title = $request->title;
+        $data->category_id = $request->category_id;
+        $data->brand_id = $request->brand_id;
+        $data->price = $request->price;
+        $data->discount_price = $request->discount_price;
+        $filename = $request->image->getClientOriginalName();
+         $request->image->move(public_path("images"),$filename);
+        $data->image = $filename;
+        $data->stock = $request->stock;
+        $data->description = $request->description;
+        $data->save();
+        return redirect()->route('product.index');
     }
 
     /**

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("type");
             $table->string("mode");
             $table->string("txn_id");
-            $table->string("dateofPayment");
+            $table->date("dateofPayment");
             $table->boolean("status");
             $table->timestamps();
         });

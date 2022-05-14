@@ -19,9 +19,10 @@ return new class extends Migration
             $table->foreignId("category_id")->constrained();
             $table->foreignId("brand_id")->constrained();
             $table->string("image");
-            $table->string("price");
-            $table->string("discount_price");
-            $table->string("stock");
+            $table->float("price");
+            $table->float("discount_price")->nullable();
+            $table->integer("stock");
+            $table->text("description");
             $table->timestamps();
         });
     }
