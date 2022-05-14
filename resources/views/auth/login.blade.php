@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 @extends('public.master')
 
+=======
+@extends('public/master')
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
 @section('content')
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
+<<<<<<< HEAD
            
         </x-slot>
 
@@ -22,11 +27,42 @@
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
+=======
+            <a href="/">
+              
+            </a>
+        </x-slot>
+
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('Email')" />
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
+
+            <!-- Password -->
+            <div class="mt-4">
+                <x-label for="password" :value="__('Password')" />
+
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
+<<<<<<< HEAD
                 </div>
+=======
+            </div>
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
 
             <!-- Remember Me -->
             <div class="block mt-4">

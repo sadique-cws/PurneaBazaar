@@ -21,6 +21,8 @@ return new class extends Migration
             $table->enum("user_type",["admin","user"]);
             $table->string("contact");
             $table->string('password');
+            $table->enum("user_type",["admin","user"]);
+            $table->string("contact");
             $table->rememberToken();
             $table->timestamps();
         });

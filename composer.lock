@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "6de37c30df2b4be1c99b5fb1cafc5689",
+=======
+    "content-hash": "4ef925300e371576eb9dee7e507198d4",
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
     "packages": [
         {
             "name": "brick/math",
@@ -5451,6 +5455,63 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "laravel/breeze",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "0d7633380c81d0827f40f6064d38f8884f5c5441"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/0d7633380c81d0827f40f6064d38f8884f5c5441",
+                "reference": "0d7633380c81d0827f40f6064d38f8884f5c5441",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.42|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2022-03-26T16:06:30+00:00"
+        },
+        {
             "name": "laravel/sail",
             "version": "v1.14.1",
             "source": {
@@ -7649,16 +7710,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "924d1ae878874ad0bb49f63b69a9af759a34ee78"
+                "reference": "51e5daaa7e43c154fe57f1ddfbba862f9fe57646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/924d1ae878874ad0bb49f63b69a9af759a34ee78",
-                "reference": "924d1ae878874ad0bb49f63b69a9af759a34ee78",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/51e5daaa7e43c154fe57f1ddfbba862f9fe57646",
+                "reference": "51e5daaa7e43c154fe57f1ddfbba862f9fe57646",
                 "shasum": ""
             },
             "require": {
@@ -7735,7 +7796,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-14T18:04:51+00:00"
+            "time": "2022-05-05T15:53:24+00:00"
         },
         {
             "name": "theseer/tokenizer",

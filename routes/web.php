@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AdminController;
 
+<<<<<<< HEAD
 Route::get("/",[PublicController::class,"index"])->name("homepage");
 Route::get("/product/{p_id}",[PublicController::class,"viewProduct"])->name("viewProduct");
 Route::get("/cart",[PublicController::class,"cart"])->name("cart");
@@ -26,6 +28,16 @@ Route::prefix("admin")->group(function(){
 });
 
 //------------------------------------- AUTH Route--------------------------------------------
+=======
+
+Route::get("/",[PublicController::class,"index"])->name("homepage");
+Route::get("/products/{p_id}",[PublicController::class,"viewProduct"])->name("viewproduct");
+Route::get("/cart",[PublicController::class,"cart"])->name("cart");
+Route::get("/checkout",[PublicController::class,"checkOut"])->name("checkout");
+
+//----------------auth------Route
+
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

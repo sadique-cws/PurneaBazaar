@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('public.master')
 
 @section('content')
@@ -5,12 +6,24 @@
     <x-auth-card>
         <x-slot name="logo">
            
+=======
+@extends('public/master')
+@section('content')
+<x-guest-layout class="mb-5">
+    <x-auth-card class="mb-5">
+        <x-slot name="logo">
+            
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
         </x-slot>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-0" :errors="$errors" />
 
+<<<<<<< HEAD
         <form method="POST" action="{{ route('register') }}" class="mt-n5">
+=======
+        <form method="POST" action="{{ route('register') }}">
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
             @csrf
 
             <!-- Name -->

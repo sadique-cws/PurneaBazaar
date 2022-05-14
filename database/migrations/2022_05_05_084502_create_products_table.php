@@ -20,9 +20,15 @@ return new class extends Migration
             $table->foreignId("brand_id")->constrained();
             $table->string("image");
             $table->float("price");
+<<<<<<< HEAD
             $table->float("discount_price")->nullable();
             $table->integer("stock");
             $table->text("description");
+=======
+            $table->text("description");
+            $table->float("discount_price");
+            $table->string("stock");
+>>>>>>> e4a8f6efdc602f3f196cfdc25a1bf4fe6af1d277
             $table->timestamps();
         });
     }
